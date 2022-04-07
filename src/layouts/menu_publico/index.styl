@@ -1,0 +1,51 @@
+@import '../../css/quasar.variables.styl'
+
+.q-layout__section--marginal {
+    background-color: #00000000 !important
+}
+.q-item.q-router-link--active, .q-item--active {
+    color: #ff6b00;
+    background: #ffffff00 !important;
+    border-radius: 25px;
+
+}
+.q-item
+    min-height: 0;
+    font-family 'monserrat_bold'
+
+.change_color {
+    background: rgba( 0, 0, 0, 0.65 );
+    backdrop-filter: blur( 8.5px );
+    -webkit-backdrop-filter: blur( 8.5px );
+}
+.font_bar
+    font-size: 16px;
+    font-family 'monserrat_medium'
+
+.chip-menu
+	padding: 14px;
+
+.chip-menu .q-chip__content
+	color: white;
+	font-size: 12px !important;
+
+.drawer_list_public .q-drawer .q-drawer__content
+	background: rgba( 0, 0, 0, 0.65 ) !important;
+	backdrop-filter: blur( 8.5px ) !important;
+	-webkit-backdrop-filter: blur( 8.5px ) !important;
+
+@media only screen and (max-width:767px){
+	.chip-menu {
+		padding: 10px;
+		font-size: 3.4vw !important;
+	}
+}
+.menu_item_public
+	padding: 5px 0 !important;
+.menu_list_public {
+	padding-top: 5vh;
+	color: $text;
+	font-family: comfortaa_l;
+}
+.drawer_list_public .q-drawer
+	top: 0px !important;
