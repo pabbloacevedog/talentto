@@ -12,7 +12,3 @@
 
 <script src="./inicio.js">
 </script>
-
-<style lang="stylus" >
-	@import './inicio.styl'
-</style>

@@ -58,7 +58,6 @@
 						left: 45vw;
 						top: 84vh;"
 			>
-				|
 				<q-chip
 					size="md"
 					label="Conózcanos ↓"
