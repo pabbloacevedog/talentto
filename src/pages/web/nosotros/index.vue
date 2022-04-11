@@ -2,7 +2,6 @@
 	<div
 		class="fondo_nosotros row"
 		:style="{ backgroundImage: 'url(' + src_fondo + ')' }"
-		data-aos="zoom-in-down"
 	>
 		<div
 			class="col-7 col-md-7 col-xs-12"
@@ -29,7 +28,7 @@
 					:key="index"
 					:img-src="item.src"
 					:ratio="1"
-					style="background-image: none; padding-top: 10vh;"
+					style="background-image: none; padding-top: 10vh"
 				>
 					<q-card
 						class="card-nosotros text-white"
@@ -39,13 +38,17 @@
 							horizontal
 							avatar
 							class="row"
-							style="padding-top: 5vh; padding-bottom: 0;padding-left: 5vw;"
+							style="
+								padding-top: 5vh;
+								padding-bottom: 0;
+								padding-left: 5vw;
+							"
 						>
 							<a class="avatar has-story">
 								<q-img :src="item.src" :ratio="1" />
 							</a>
 							<q-card-section
-								style="padding: 0 !important; margin:auto"
+								style="padding: 0 !important; margin: auto"
 								align="center"
 							>
 								<div class="nombre_nosotros">
@@ -74,6 +77,6 @@
 
 <script src="./index.js"></script>
 
-<style lang="stylus">
+<style scoped lang="stylus">
 @import './index.styl';
 </style>

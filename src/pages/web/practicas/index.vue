@@ -1,7 +1,7 @@
 <template>
 	<div
 		class="row"
-		style="padding-top: 50px;"
+		style="padding-top: 50px"
 		:style="{ backgroundImage: 'url(' + src_fondo + ')' }"
 	>
 		<div class="col-3">
@@ -51,7 +51,11 @@
 								<q-card-section class="col-12 flex flex-center">
 									<q-img
 										:src="mostrar_banner(props.row.banner)"
-										style="border-radius: 25px; max-height: 230px;min-height: 230px;"
+										style="
+											border-radius: 25px;
+											max-height: 230px;
+											min-height: 230px;
+										"
 									/>
 								</q-card-section>
 							</q-card-section>
@@ -77,7 +81,7 @@
 									clickable
 									color="green"
 									text-color="white"
-									style="padding: 16px;"
+									style="padding: 16px"
 								>
 									Ver más
 								</q-chip>
@@ -92,6 +96,6 @@
 
 <script src="./index.js"></script>
 
-<style lang="stylus">
+<style scoped lang="stylus">
 @import './index.styl'
 </style>

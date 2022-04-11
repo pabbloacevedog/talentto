@@ -4,7 +4,7 @@
 			<q-toolbar
 				:class="{ change_color: scrollPosition > 50 }"
 				elevated
-				style="padding-right: 0px; padding-left:8px"
+				style="padding-right: 0px; padding-left: 8px"
 			>
 				<q-btn
 					dense
@@ -13,27 +13,29 @@
 					icon="menu"
 					@click="mostrarDrawer = !mostrarDrawer"
 				/>
-				<q-btn style="margin-left: 12px;" flat round class="q-mr-sm">
+				<q-btn style="margin-left: 12px" flat round class="q-mr-sm">
 					<img
-						style="max-height: 40px;"
+						style="max-height: 40px"
 						:src="src_logo"
 						@click="ir_home"
 					/>
 				</q-btn>
-				<div class="titulo_bar" v-if="$q.platform.is.desktop">Talent to serve</div>
+				<div class="titulo_bar" v-if="$q.platform.is.desktop">
+					Talent to serve
+				</div>
 				<q-toolbar-title
 					v-if="$q.platform.is.desktop"
 					class="row justify-center"
 				>
 				</q-toolbar-title>
-				<div class="n_usuario" style="right: 15px;position: absolute;">
+				<div class="n_usuario" style="right: 15px; position: absolute">
 					<q-chip
 						@click="irPublic"
 						clickable
 						icon="home"
 						color="green"
 						text-color="white"
-						style="padding: 14px;"
+						style="padding: 14px"
 					>
 						Home
 					</q-chip>
@@ -42,7 +44,7 @@
 						@remove="logout"
 						color="red"
 						text-color="white"
-						style="padding: 14px;"
+						style="padding: 14px"
 					>
 						{{ nombre }}
 					</q-chip>
@@ -83,7 +85,7 @@
 					>
 						<q-item-section
 							avatar
-							style="min-width: 24px !important;"
+							style="min-width: 24px !important"
 						>
 							<q-icon :name="menuItem.icon" />
 						</q-item-section>
@@ -102,6 +104,6 @@
 	</q-layout>
 </template>
 <script src="./menu.js"></script>
-<style lang="stylus">
+<style scoped lang="stylus">
 @import './menu.styl'
 </style>

@@ -1,10 +1,10 @@
 <template>
-	<div class="div_fondo_op row" style="padding-top: 50px;">
+	<div class="div_fondo_op row" style="padding-top: 50px">
 		<q-dialog
 			persistent
 			v-model="modal_ver_mas"
 			class="dialog-empleos"
-			style="padding: 0 !important;"
+			style="padding: 0 !important"
 		>
 			<q-card class="my-card text-white card-dialog-empleos">
 				<q-card-section class="q-pb-none q-px-xl">
@@ -27,10 +27,8 @@
 						style="b"
 					>
 						<q-img
-							class=" contorno-img"
-							:style="
-								`border-radius: 24px; max-height: 20vh;min-height: 20vh; border: white 11px solid;    background: white;`
-							"
+							class="contorno-img"
+							:style="`border-radius: 24px; max-height: 20vh;min-height: 20vh; border: white 11px solid;    background: white;`"
 							:src="mostrar_banner(info.banner)"
 							:id="info.codigo"
 						/>
@@ -42,10 +40,8 @@
 						style="b"
 					>
 						<q-img
-							class=" contorno-img"
-							:style="
-								`border-radius: 24px; max-height: 20vh;min-height: 20vh; border: white 11px solid;    background: white;`
-							"
+							class="contorno-img"
+							:style="`border-radius: 24px; max-height: 20vh;min-height: 20vh; border: white 11px solid;    background: white;`"
 							:src="mostrar_banner(info.banner)"
 							:id="info.codigo"
 						/>
@@ -60,7 +56,7 @@
 					</q-card-section>
 				</q-card-section>
 				<q-card-section class="q-pt-xs q-px-xl">
-					<div style="color: #8ab4f8;">
+					<div style="color: #8ab4f8">
 						{{ info.email }}
 					</div>
 				</q-card-section>
@@ -84,7 +80,7 @@
 						clickable
 						text-color="white"
 						class="ver_mas"
-						style="padding: 16px;"
+						style="padding: 16px"
 					>
 						Aceptar
 					</q-chip>
@@ -97,7 +93,7 @@
 					<template class="buscador">
 						<div
 							class="q-pl-xs"
-							style="color: #ffffff; font-size: 1.6vw;"
+							style="color: #ffffff; font-size: 1.6vw"
 							v-if="$q.platform.is.desktop"
 						>
 							{{ parametros_tabla.title }}
@@ -105,7 +101,7 @@
 						<div
 							v-else
 							class="q-pl-xs"
-							style="color: #ffffff; font-size: 5.5vw;"
+							style="color: #ffffff; font-size: 5.5vw"
 						>
 							{{ parametros_tabla.title }}
 						</div>
@@ -117,7 +113,7 @@
 							rounded
 							v-model="parametros_tabla.filter"
 							placeholder="Buscar"
-							style="color: #ffffff;"
+							style="color: #ffffff"
 							class="q-py-lg"
 						>
 							<template v-slot:append class="">
@@ -210,27 +206,33 @@
 										:ref="props.row.codigo"
 										class="col-2 contorno-img"
 										:src="mostrar_banner(props.row.banner)"
-										:style="
-											`border-radius: 24px; max-height: 146px;min-height: 146px; border: white 11px solid;    background: white;`
-										"
+										:style="`border-radius: 24px; max-height: 146px;min-height: 146px; border: white 11px solid;    background: white;`"
 									/>
 									{{ props.row.color }}
 									<!-- </div> -->
-									<q-card-section class="row q-px-md q-pb-xs" style="    padding-top: 8px;">
+									<q-card-section
+										class="row q-px-md q-pb-xs"
+										style="padding-top: 8px"
+									>
 										<div
 											class="col-12 text-h7"
-											style="font-weight: 600;"
+											style="font-weight: 600"
 										>
-											{{ truncate_proveedor(props.row.proveedor) }}
+											{{
+												truncate_proveedor(
+													props.row.proveedor
+												)
+											}}
 										</div>
 										<div
-											class="col-12" style="font-size: 0.8em;"
+											class="col-12"
+											style="font-size: 0.8em"
 										>
 											{{ props.row.direccion }}
 										</div>
 										<div
 											class="col-12 q-py-xs"
-											style="color: #9babc1;"
+											style="color: #9babc1"
 										>
 											{{
 												truncate(props.row.descripcion)
@@ -238,7 +240,10 @@
 										</div>
 										<div
 											class="col-12 text-subtitle2"
-											style="font-size: 0.74rem; color: #8ab4f8;"
+											style="
+												font-size: 0.74rem;
+												color: #8ab4f8;
+											"
 										>
 											{{ props.row.email }}
 										</div>
@@ -259,7 +264,7 @@
 											clickable
 											text-color="white"
 											class="ver_mas"
-											style="padding: 16px;"
+											style="padding: 16px"
 										>
 											Ver más
 										</q-chip>
@@ -271,22 +276,20 @@
 										:ref="props.row.codigo"
 										class="col-2 contorno-img"
 										:src="mostrar_banner(props.row.banner)"
-										:style="
-											`border-radius: 24px; max-height: 146px;min-height: 146px; border: white 11px solid;    background: white;`
-										"
+										:style="`border-radius: 24px; max-height: 146px;min-height: 146px; border: white 11px solid;    background: white;`"
 									/>
 									{{ props.row.color }}
 									<!-- </div> -->
 									<q-card-section class="row">
 										<div
 											class="col-12 text-h7"
-											style="font-weight: 600;"
+											style="font-weight: 600"
 										>
 											{{ props.row.direccion }}
 										</div>
 										<div
 											class="col-12 q-py-xs"
-											style="color: #9babc1;"
+											style="color: #9babc1"
 										>
 											{{
 												truncate(props.row.descripcion)
@@ -294,7 +297,10 @@
 										</div>
 										<div
 											class="col-12 text-subtitle2"
-											style="font-size: 0.74rem; color: #8ab4f8;"
+											style="
+												font-size: 0.74rem;
+												color: #8ab4f8;
+											"
 										>
 											{{ props.row.email }}
 										</div>
@@ -315,7 +321,7 @@
 											clickable
 											text-color="white"
 											class="ver_mas"
-											style="padding: 16px;"
+											style="padding: 16px"
 										>
 											Ver más
 										</q-chip>
@@ -332,6 +338,6 @@
 
 <script src="./index.js"></script>
 
-<style lang="stylus">
+<style scoped lang="stylus">
 @import './index.styl'
 </style>

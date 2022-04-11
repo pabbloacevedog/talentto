@@ -1,5 +1,12 @@
 <template>
 	<div>
+		<q-page-sticky
+			position="bottom-right"
+			:offset="[18, 18]"
+			v-if="$q.platform.is.mobile"
+		>
+			<q-btn fab icon="add" color="accent" @click="modal_nuevo = true" />
+		</q-page-sticky>
 		<q-breadcrumbs active-color="accent" v-if="$q.platform.is.desktop">
 			<template v-slot:separator>
 				<q-icon size="1.2em" name="arrow_forward" color="accent" />
@@ -15,9 +22,7 @@
 			<div class="flex items-center justify-end q-gutter-sm">
 				<q-chip clickable @click="modal_nuevo = true" class="btn_add">
 					<q-avatar class="activo icon_add" text-color="white">
-						<span class="material-icons">
-							add
-						</span>
+						<span class="material-icons"> add </span>
 					</q-avatar>
 					Crear Nuevo
 				</q-chip>
@@ -26,7 +31,7 @@
 		<div v-if="$q.platform.is.mobile">
 			<tabla :parametros="parametros_tabla" :funciones="funciones" />
 		</div>
-		<div style="padding-top: 2%;" v-else>
+		<div style="padding-top: 2%" v-else>
 			<tabla :parametros="parametros_tabla" :funciones="funciones" />
 		</div>
 		<q-dialog
@@ -37,7 +42,7 @@
 		>
 			<q-card
 				class="modales"
-				style="width: 900px; max-width: 90vw !important;"
+				style="width: 900px; max-width: 90vw !important"
 				color="primary"
 			>
 				<q-card-section align="center">
@@ -131,7 +136,7 @@
 						class="input-reg q-mx-lg"
 					/>
 				</q-card-section>
-				<div class="q-pb-lg" style="text-align: center;">
+				<div class="q-pb-lg" style="text-align: center">
 					<q-btn
 						rounded
 						@click.native="modal_nuevo = false"
@@ -155,7 +160,7 @@
 		>
 			<q-card
 				class="modales"
-				style="width: 900px; max-width: 90vw !important;"
+				style="width: 900px; max-width: 90vw !important"
 			>
 				<q-card-section align="center">
 					<div class="text-h6 titulo_crear" color="text">
@@ -232,7 +237,7 @@
 						dense
 						standout
 						@input="
-							val => {
+							(val) => {
 								editar_banner = val;
 							}
 						"
@@ -253,7 +258,7 @@
 						class="input-reg q-mx-lg"
 					/>
 				</q-card-section>
-				<div class="q-pb-lg" style="text-align: center;">
+				<div class="q-pb-lg" style="text-align: center">
 					<q-btn
 						rounded
 						@click.native="modal_editar = false"
@@ -270,7 +275,7 @@
 			</q-card>
 		</q-dialog>
 		<q-dialog persistent width="800" v-model="modal_eliminar">
-			<q-card class="modales" style="width: 800px;">
+			<q-card class="modales" style="width: 800px">
 				<q-card-section align="center">
 					<div class="text-h6 titulo_crear" color="text">
 						Eliminar registro
@@ -297,7 +302,7 @@
 						?
 					</div>
 				</q-card-section>
-				<div class="q-pb-lg" style="text-align: center;">
+				<div class="q-pb-lg" style="text-align: center">
 					<q-btn
 						rounded
 						@click.native="modal_eliminar = false"
@@ -314,14 +319,14 @@
 			</q-card>
 		</q-dialog>
 		<q-dialog persistent width="800" v-model="modal_banner">
-			<q-card class="modales" style=" max-width: 90vw; max-height:90vh">
+			<q-card class="modales" style="max-width: 90vw; max-height: 90vh">
 				<q-card-section align="center">
 					<q-img
 						:src="banner"
-						style="width: 80vw;max-height:70vh"
+						style="width: 80vw; max-height: 70vh"
 					></q-img>
 				</q-card-section>
-				<div class="q-pb-lg" style="text-align: center;">
+				<div class="q-pb-lg" style="text-align: center">
 					<q-btn
 						rounded
 						@click.native="modal_banner = false"
@@ -331,18 +336,11 @@
 				</div>
 			</q-card>
 		</q-dialog>
-		<q-page-sticky
-			position="bottom-right"
-			:offset="[18, 18]"
-			v-if="$q.platform.is.mobile"
-		>
-			<q-btn fab icon="add" color="accent" @click="modal_nuevo = true" />
-		</q-page-sticky>
 	</div>
 </template>
 
 <script src="./index.js"></script>
 
-<style lang="stylus">
+<style scoped lang="stylus">
 @import './index.styl'
 </style>

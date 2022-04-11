@@ -22,7 +22,7 @@
 					<q-card class="sin_fondo">
 						<q-card-section
 							class="q-py-xs row"
-							style="display: flex;align-items: center;"
+							style="display: flex; align-items: center"
 						>
 							<div
 								bg-color="accent"
@@ -38,7 +38,7 @@
 						</q-card-section>
 						<q-card-section class="section-title">
 							<q-input
-								style="font-size:1em;"
+								style="font-size: 1em"
 								dark
 								dense
 								standout
@@ -46,7 +46,7 @@
 								label="Nombre y Apellido"
 								ref="nombre"
 								v-model="nombre"
-								:rules="[val => !!val || 'Ingrese un nombre']"
+								:rules="[(val) => !!val || 'Ingrese un nombre']"
 								class="q-ml-md input-register"
 							>
 								<template v-slot:before>
@@ -54,7 +54,7 @@
 								</template>
 							</q-input>
 							<q-input
-								style="font-size:1em;"
+								style="font-size: 1em"
 								dark
 								dense
 								standout
@@ -64,7 +64,7 @@
 								ref="email"
 								class="q-ml-md input-register"
 								:rules="[
-									val => !!val || 'El email es obligatorio'
+									(val) => !!val || 'El email es obligatorio',
 								]"
 							>
 								<template v-slot:before>
@@ -72,7 +72,7 @@
 								</template>
 							</q-input>
 							<div>
-								<div style="float:left;width: 50%;">
+								<div style="float: left; width: 50%">
 									<q-select
 										dark
 										dense
@@ -84,8 +84,8 @@
 										ref="id_perfil"
 										class="q-ml-md input-register"
 										:rules="[
-											val =>
-												!!val || 'Seleccione un perfil'
+											(val) =>
+												!!val || 'Seleccione un perfil',
 										]"
 										@change="perfil_view"
 									>
@@ -108,8 +108,8 @@
 										hint="Ej: (9) 99-99-99-99"
 										class="q-ml-md input-register-2"
 										:rules="[
-											val =>
-												!!val || 'Ingrese un teléfono'
+											(val) =>
+												!!val || 'Ingrese un teléfono',
 										]"
 									>
 										<template v-slot:append>
@@ -120,7 +120,7 @@
 							</div>
 
 							<q-input
-								style="font-size:1em;"
+								style="font-size: 1em"
 								dark
 								dense
 								standout
@@ -135,7 +135,7 @@
 								</template>
 							</q-input>
 							<q-input
-								style="font-size:1em;"
+								style="font-size: 1em"
 								dark
 								dense
 								standout
@@ -150,7 +150,7 @@
 								</template>
 							</q-input>
 							<q-input
-								style="font-size:1em;"
+								style="font-size: 1em"
 								dark
 								dense
 								standout
@@ -197,9 +197,9 @@
 								</template>
 							</q-select>
 							<div>
-								<div style="float:left;width: 50%;">
+								<div style="float: left; width: 50%">
 									<q-input
-										style="font-size:1em;"
+										style="font-size: 1em"
 										dark
 										dense
 										standout
@@ -209,9 +209,9 @@
 										class="q-ml-md input-register"
 										ref="password"
 										:rules="[
-											val =>
+											(val) =>
 												!!val ||
-												'Ingrese una contraseña'
+												'Ingrese una contraseña',
 										]"
 										:type="isPwd ? 'password' : 'text'"
 									>
@@ -233,7 +233,7 @@
 								</div>
 								<div>
 									<q-input
-										style="font-size:1em;"
+										style="font-size: 1em"
 										dark
 										dense
 										standout
@@ -241,8 +241,8 @@
 										label="Repetir password"
 										v-model="repassword"
 										:rules="[
-											val =>
-												!!val || 'Repita la contraseña'
+											(val) =>
+												!!val || 'Repita la contraseña',
 										]"
 										class="q-ml-md input-register-2"
 										:type="isPwd ? 'password' : 'text'"
@@ -280,17 +280,17 @@
 							</q-select>
 							<span class="danger">{{ error }}</span>
 							<span>
-								<p style="font-size:1.2em;">
+								<p style="font-size: 1.2em">
 									<a
 										@click="$router.push('/login')"
-										style="color: #ff8037;"
+										style="color: #ff8037"
 										>Ir a Login</a
 									>
 								</p>
 							</span>
 						</q-card-section>
 
-						<q-card-section style="padding-top: 0px;">
+						<q-card-section style="padding-top: 0px">
 							<q-btn class="btn-inicio" rounded @click="register"
 								>Registrarse</q-btn
 							>
@@ -324,6 +324,6 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style scoped lang="stylus">
 @import './registry.styl';
 </style>

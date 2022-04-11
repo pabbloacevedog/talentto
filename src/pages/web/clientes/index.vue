@@ -1,8 +1,8 @@
 <template>
-	<div style="height: 100%;background-color: #000000;" class="borroso row">
+	<div style="height: 100%; background-color: #000000" class="borroso row">
 		<div
 			class="col-12 col-md-12 col-xs-12"
-			style="height: 15vh;padding-top: 2%;"
+			style="height: 15vh; padding-top: 2%"
 		>
 			<div class="column flex-center">
 				<div class="text-white column flex-center titulo-historia">
@@ -11,7 +11,7 @@
 			</div>
 		</div>
 		<div class="col-12 col-md-12 col-xs-12">
-			<div class="q-px-xs row cont-clientes" data-aos="zoom-out-down">
+			<div class="q-px-xs row cont-clientes">
 				<div
 					class="q-gutter-md q-pa-md row items-start col-md-3"
 					v-for="transition in items"
@@ -21,7 +21,8 @@
 						:src="transition.src"
 						:ratio="16 / 9"
 						spinner-color="white"
-						class="rounded-borders img-clientes"
+						style="width: 380px"
+						class="rounded-borders"
 					>
 						<div class="absolute-bottom text-center text-body2">
 							{{ transition.nombre }}
@@ -35,6 +36,6 @@
 
 <script src="./index.js"></script>
 
-<style lang="stylus">
+<style scoped lang="stylus">
 @import './index.styl'
 </style>

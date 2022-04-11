@@ -200,6 +200,9 @@ export default Vue.component("Registry", {
 		async SetNewPass() {
 			// this.$q.loading.show()
 			var todos = [];
+			// array.forEach(element => {
+
+			// });
 			var newObj = this.allPass.map(user => {
 				user.password_new = user.password;
 				user.passphrase = user.password;

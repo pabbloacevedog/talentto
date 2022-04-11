@@ -47,6 +47,7 @@
                     </q-list>
                 </q-menu>
                 </q-btn>
+            <q-space/>
 
         </template>
 
@@ -108,7 +109,7 @@
                 v-model="parametros.filter"
                 rounded
                 placeholder="Buscar"
-				class="buscar"
+				class="buscar_mobile"
             >
                 <template v-slot:append>
                     <q-icon name="search" />

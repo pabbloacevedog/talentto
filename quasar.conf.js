@@ -8,7 +8,6 @@ module.exports = function (ctx) {
 		// --> boot files are part of "main.js"
 		boot: [
 			"i18n",
-			"axios",
 			"apollo",
 			"general",
 			"trend",
@@ -16,7 +15,7 @@ module.exports = function (ctx) {
 			"rutasDinamicas",
 			"packer",
 			"componentes",
-			"notify-defaults"
+			"notify-defaults",
 		],
 
 		css: ["app.styl"],
@@ -29,7 +28,7 @@ module.exports = function (ctx) {
 			"material-icons-sharp",
 			// 'ionicons-v4',
 			// 'mdi-v3',
-			"fontawesome-v5"
+			"fontawesome-v5",
 			// 'eva-icons'
 		],
 
@@ -58,7 +57,7 @@ module.exports = function (ctx) {
 			plugins: ["Notify"],
 
 			// iconSet: 'ionicons-v4'
-			lang: "es" // Quasar language
+			lang: "es", // Quasar language
 		},
 
 		supportIE: false,
@@ -66,12 +65,12 @@ module.exports = function (ctx) {
 		build: {
 			scopeHoisting: true,
 			vueRouterMode: "history",
+			distDir: ctx.mode.spa ? "public" : null,
 			// vueRouterBase:'',
 			// vueCompiler: true,
 			// gzip: true,
 			// analyze: true,
 			// extractCSS: false,
-			distDir: ctx.mode.spa ? "public" : null,
 			env: envparsers(),
 			extendWebpack(cfg) {
 				cfg.resolve.alias = {
@@ -80,21 +79,21 @@ module.exports = function (ctx) {
 					vue$: "vue/dist/vue.esm.js",
 					"@": "src",
 					"@statics": "src/statics",
-					"@utils": "src/utils"
+					"@utils": "src/utils",
 				};
-			}
+			},
 		},
 
 		devServer: {
 			// https: true,
 			port: 9000,
-			open: true // opens browser window automatically
+			open: true, // opens browser window automatically
 		},
 
 		animations: "all",
 
 		ssr: {
-			pwa: false
+			pwa: false,
 		},
 
 		pwa: {
@@ -112,30 +111,30 @@ module.exports = function (ctx) {
 					{
 						src: "statics/icons/icon-128x128.png",
 						sizes: "128x128",
-						type: "image/png"
+						type: "image/png",
 					},
 					{
 						src: "statics/icons/icon-192x192.png",
 						sizes: "192x192",
-						type: "image/png"
+						type: "image/png",
 					},
 					{
 						src: "statics/icons/icon-256x256.png",
 						sizes: "256x256",
-						type: "image/png"
+						type: "image/png",
 					},
 					{
 						src: "statics/icons/icon-384x384.png",
 						sizes: "384x384",
-						type: "image/png"
+						type: "image/png",
 					},
 					{
 						src: "statics/icons/icon-512x512.png",
 						sizes: "512x512",
-						type: "image/png"
-					}
-				]
-			}
+						type: "image/png",
+					},
+				],
+			},
 		},
 
 		cordova: {
@@ -164,7 +163,7 @@ module.exports = function (ctx) {
 			builder: {
 				// https://www.electron.build/configuration/configuration
 				// appId: 'quasar-app'
-			}
-		}
+			},
+		},
 	};
 }

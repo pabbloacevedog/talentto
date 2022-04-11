@@ -1,7 +1,13 @@
 <template>
 	<div
 		class="row"
-		style="padding-top: 50px;background-size: cover;height: 100%;min-height: 100vh !important;background-color: #121212  !important;"
+		style="
+			padding-top: 50px;
+			background-size: cover;
+			height: 100%;
+			min-height: 100vh !important;
+			background-color: #121212 !important;
+		"
 	>
 		<q-dialog persistent width="800" v-model="modal_ver_mas">
 			<q-card class="card-dialog">
@@ -10,12 +16,12 @@
 						{{ info.titulo }}
 					</div>
 				</q-card-section>
-				<q-card-section class="q-pa-lg " align="center">
+				<q-card-section class="q-pa-lg" align="center">
 					<div class="text-subtitle2 text-blue-grey-4">
 						{{ info.descripcion }}
 					</div>
 				</q-card-section>
-				<q-card-actions align="right" class="q-pa-lg ">
+				<q-card-actions align="right" class="q-pa-lg">
 					<q-btn
 						rounded
 						@click.native="modal_ver_mas = false"
@@ -31,7 +37,7 @@
 				grid
 				card-class="bg-primary text-white"
 				title="Asesorias"
-				style="color: #ffffff;"
+				style="color: #ffffff"
 				class="tabla_capacitaciones"
 				:data="parametros_tabla.data"
 				:columns="parametros_tabla.columns"
@@ -58,32 +64,32 @@
 				</template>
 				<template v-slot:item="props">
 					<transition appear enter-active-class="animated fadeInLeft">
-					<div class="q-pa-xs col-xs-12 col-sm-6 col-md-4">
-						<q-card class="my-card card-capacitacion">
-							<q-card-section>
-								<div class="text-h6 q-px-sm">
-									{{ truncate_cargo(props.row.titulo) }}
-								</div>
-							</q-card-section>
-							<q-card-section class="q-px-lg q-py-xs">
-								<div class="text-caption">
-									{{ truncate(props.row.descripcion) }}
-								</div>
-							</q-card-section>
+						<div class="q-pa-xs col-xs-12 col-sm-6 col-md-4">
+							<q-card class="my-card card-capacitacion">
+								<q-card-section>
+									<div class="text-h6 q-px-sm">
+										{{ truncate_cargo(props.row.titulo) }}
+									</div>
+								</q-card-section>
+								<q-card-section class="q-px-lg q-py-xs">
+									<div class="text-caption">
+										{{ truncate(props.row.descripcion) }}
+									</div>
+								</q-card-section>
 
-							<q-card-actions align="right">
-								<q-chip
-									@click="ver_mas(props.row)"
-									clickable
-									class="ver_mas"
-									text-color="white"
-									style="padding: 16px;"
-								>
-									Ver más
-								</q-chip>
-							</q-card-actions>
-						</q-card>
-					</div>
+								<q-card-actions align="right">
+									<q-chip
+										@click="ver_mas(props.row)"
+										clickable
+										class="ver_mas"
+										text-color="white"
+										style="padding: 16px"
+									>
+										Ver más
+									</q-chip>
+								</q-card-actions>
+							</q-card>
+						</div>
 					</transition>
 				</template>
 			</q-table>
@@ -101,6 +107,6 @@
 
 <script src="./index.js"></script>
 
-<style lang="stylus">
+<style scoped lang="stylus">
 @import './index.styl'
 </style>

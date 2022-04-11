@@ -1,6 +1,5 @@
 import { ApolloClient } from 'apollo-client'
 import { InMemoryCache } from 'apollo-cache-inmemory'
-import { persistCache } from 'apollo3-cache-persist';
 import { setContext as ST } from 'apollo-link-context'
 import VueApollo from 'vue-apollo'
 import fetch from 'node-fetch'
@@ -8,7 +7,6 @@ import fetch from 'node-fetch'
 import { onError } from 'apollo-link-error';
 import { split } from "apollo-link";
 import { ApolloLink, from } from "apollo-link";
-import { SubscriptionClient } from 'subscriptions-transport-ws'
 import { createUploadLink } from 'apollo-upload-client'
 import { WebSocketLink } from 'apollo-link-ws'
 import { getMainDefinition } from 'apollo-utilities'

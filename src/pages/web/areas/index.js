@@ -8,18 +8,19 @@ export default Vue.component('Areas', {
 	data () {
 		return {
 			src_persona: "statics/img/8.png",
-			active_transition: false
 		};
 	},
 	computed: {
-		// ...mapGetters({
-        //     isLogin: "Auth/isLogin", isAdmin: "Auth/isAdmin"
-        // })
+		...mapGetters({
+            isLogin: "Auth/isLogin", isAdmin: "Auth/isAdmin"
+        })
 	},
 	methods: {
 
 	},
 	created () {
+
+        console.log('en compontente')
 	},
 	mounted () {
 	},

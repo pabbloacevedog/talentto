@@ -1,7 +1,7 @@
 import {
 	LOGIN_QUERY,
-	FORGET_QUERY,
-	GET_ALL_PASS_USERS,UPDATE_PASSWORD_USER_MUTATION
+	FORGET_QUERY
+	// GET_ALL_PASS_USERS,UPDATE_PASSWORD_USER_MUTATION
 } from "./consultas";
 import {getUserFromToken} from '@utils/authService'
 import {crearRouter, crearRutas} from '@utils/crearRouter'
@@ -97,29 +97,29 @@ const actions = {
 				commit("FORGET_ERROR", response);
 			});
 	},
-	async SetNewPass({commit}, credenciales) {
-		commit('UPDATEPASS')
-		var users = credenciales.users
-		await this.$apollo.defaultClient.mutate({
-			mutation: UPDATE_PASSWORD_USER_MUTATION,
-			variables: {users }
-		}).then(response => {
-			const datos = response.data.updateUsers.editado
-			commit('UPDATEPASS_SUCCESS', datos)
-		}).catch(response => {
-			console.log('response', response)
-			commit('UPDATEPASS_ERROR', response)
-		})
-	},
-	async getPassUsers({commit}){
-	    commit('GETPASS')
-		await this.$apollo.defaultClient.query({query: GET_ALL_PASS_USERS}).then(response => {
-			const allpass = response.data.Usuarios
-			commit('GETPASS_SUCCESS', allpass)
-		}).catch(response => {
-			commit('GETPASS_ERROR', response)
-		})
-	},
+	// async SetNewPass({commit}, credenciales) {
+	// 	commit('UPDATEPASS')
+	// 	var users = credenciales.users
+	// 	await this.$apollo.defaultClient.mutate({
+	// 		mutation: UPDATE_PASSWORD_USER_MUTATION,
+	// 		variables: {users }
+	// 	}).then(response => {
+	// 		const datos = response.data.updateUsers.editado
+	// 		commit('UPDATEPASS_SUCCESS', datos)
+	// 	}).catch(response => {
+	// 		console.log('response', response)
+	// 		commit('UPDATEPASS_ERROR', response)
+	// 	})
+	// },
+	// async getPassUsers({commit}){
+	//     commit('GETPASS')
+	// 	await this.$apollo.defaultClient.query({query: GET_ALL_PASS_USERS}).then(response => {
+	// 		const allpass = response.data.Usuarios
+	// 		commit('GETPASS_SUCCESS', allpass)
+	// 	}).catch(response => {
+	// 		commit('GETPASS_ERROR', response)
+	// 	})
+	// },
 	logout({ commit }) {
 		localStorage.removeItem("token");
 		localStorage.removeItem("path_default");

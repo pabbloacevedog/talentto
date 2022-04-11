@@ -1,9 +1,7 @@
 <template>
 	<div v-if="!isLogin" id="app">
 		<div class="contenedor_todo">
-			<div
-				class="row q-pa-xl contenedor-login"
-			>
+			<div class="row q-pa-xl contenedor-login">
 				<div class="col-6 bloq_iz col-md-6 col-xs-12">
 					<transition
 						appear
@@ -20,8 +18,12 @@
 				<div class="col-6 col-md-6 col-xs-12 bloq_der">
 					<center>
 						<q-card class="sin_fondo">
-							<q-card-section class="q-py-xl bienvenido" >
-								<img :src="avatar_clean" class="logo-login" @click="$router.push('/')"/>
+							<q-card-section class="q-py-xl bienvenido">
+								<img
+									:src="avatar_clean"
+									class="logo-login"
+									@click="$router.push('/')"
+								/>
 								<div
 									bg-color="accent"
 									class="text-h4 f_robotto_t"
@@ -29,9 +31,9 @@
 									Bienvenido
 								</div>
 							</q-card-section>
-							<q-card-section style="padding-bottom: 0px;">
+							<q-card-section style="padding-bottom: 0px">
 								<q-input
-									style="font-size:1em;"
+									style="font-size: 1em"
 									dark
 									dense
 									standout
@@ -45,7 +47,7 @@
 									</template>
 								</q-input>
 								<q-input
-									style="font-size:1em;"
+									style="font-size: 1em"
 									dark
 									dense
 									standout
@@ -71,28 +73,28 @@
 									</template>
 								</q-input>
 								<!-- <span class='danger' style="padding: 10px;">{{error}}</span> -->
-								<span style="padding-top: 10px;">
-									<p style="font-size:1em;">
+								<span style="padding-top: 10px">
+									<p style="font-size: 1em">
 										¿No tienes una cuenta?
 										<a
 											@click="$router.push('/registry')"
-											style="color: #ff8037;"
+											style="color: #ff8037"
 											>Regístrate</a
 										>
 									</p>
 								</span>
 								<span>
-									<p style="font-size:1em;">
+									<p style="font-size: 1em">
 										<a
 											@click="$router.push('/forget')"
-											style="color: #ff8037;"
+											style="color: #ff8037"
 											>Olvide mi contraseña</a
 										>
 									</p>
 								</span>
 							</q-card-section>
 
-							<q-card-section style="padding-top: 10px;">
+							<q-card-section style="padding-top: 10px">
 								<q-btn
 									class="btn-inicio"
 									rounded
@@ -114,6 +116,6 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style scoped lang="stylus">
 @import './start.styl'
 </style>

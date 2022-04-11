@@ -1,12 +1,3 @@
-import docxtemplater from 'docxtemplater'
-import JSZip from 'jszip'
-import JSZipUtils from 'jszip-utils'
-import { saveAs } from 'file-saver';
-import XlsxTemplate from 'xlsx-template'
-// import { triggerAsyncId } from 'async_hooks';
-var fs           = require('fs'),
-    path         = require('path'),
-    etree        = require('elementtree');
 
 export default {
     install: (Vue) => {
@@ -335,7 +326,7 @@ export default {
             },
 			formatear_rut(rut){
 				let value = rut.replace(/\./g, '').replace('-', '')
-  
+
 				if (value.match(/^(\d{2})(\d{3}){2}(\w{1})$/)) {
 					value = value.replace(/^(\d{2})(\d{3})(\d{3})(\w{1})$/, '$1.$2.$3-$4')
 				}
@@ -362,68 +353,6 @@ export default {
 				this.alert.context = tipo
 				this.alert.timeout = timeout
 				this.alert.text = mensaje
-			},
-			loadFile(url,callback){
-				JSZipUtils.getBinaryContent(url,callback);
-			},
-			formatoWord(nombre_formato,plantilla,datos){
-				this.loadFile(plantilla,function(error,content){
-					if (error) { throw error };
-					var zip = new JSZip(content);
-					var doc = new docxtemplater().loadZip(zip)
-					//se pasan los datos como objeto a la plantilla para reemplazar las etiquetas
-					doc.setData(datos);
-					try {
-						// renderiza el documento con los nuevos datos
-						doc.render()
-					}
-					catch (error) {
-						var e = {
-							message: error.message,
-							name: error.name,
-							stack: error.stack,
-							properties: error.properties,
-						}
-						console.log(JSON.stringify({error: e}));
-						// El error lanzado aquí contiene información adicional cuando se registra con JSON.stringify (contiene un objeto de propiedad).
-						throw error;
-					}
-					var out=doc.getZip().generate({
-						type:"blob",
-						mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-					})
-					//Imprime el documento utilizando Data-URI
-					saveAs(out,nombre_formato+".docx")
-				})
-			},
-			formatoExcel(nombre_formato,plantilla,datos){
-				// Carga un archivo XLSX en la memoria
-				this.loadFile(plantilla,function(error,content){
-					if (error) { throw error };
-					var zip = new JSZip(content);
-					// Crear plantilla
-					var template = new XlsxTemplate(content);
-					// Numero de la hoja donde irán los reemplazos, por defecto sheet 1
-					var sheetNumber = 1;
-					// Se pasan los datos a la plantilla y se reemplazan los datos del objeto por los de las etiquetas
-					template.substitute(sheetNumber, datos);
-					var out
-					try {
-						// renderiza el documento con los nuevos datos
-						// obtiene los datos binarios
-						out = template.generate({
-							type:"blob",
-							mimeType: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-						}) //Output the document using Data-URI
-					}
-					catch (error) {
-						console.log(JSON.stringify({error: e}));
-						// El error lanzado aquí contiene información adicional cuando se registra con JSON.stringify (contiene un objeto de propiedad).
-						throw error;
-					}
-					//Imprime el documento excel con el nombre del formato pasado por parametro
-					saveAs(out,nombre_formato+".xlsx")
-				})
 			},
 			// componente(name){
 			// 	// var importacion = '../../pages/'+name+'/'+name+'.vue'

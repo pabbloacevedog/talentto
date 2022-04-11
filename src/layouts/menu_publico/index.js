@@ -50,7 +50,7 @@ export default Vue.component("MenuPublico", {
 					name: "Proveedores",
 					path: "/Proveedores",
 					pag: true,
-					icon: "fas fa-clipboard",
+					icon: "",
 					tag: "/Proveedores"
 				},
 				{
@@ -169,10 +169,5 @@ export default Vue.component("MenuPublico", {
 		window.addEventListener("scroll", this.updateScroll);
 	},
 	updated() {},
-	watch: {
-		window: function() {
-			console.log(window.scrollY);
-		}
-
-	}
+	watch: {}
 });

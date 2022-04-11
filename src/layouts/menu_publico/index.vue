@@ -132,7 +132,7 @@
 					>
 						<q-item-section
 							avatar
-							style="min-width: 24px !important;"
+							style="min-width: 24px !important"
 						>
 							<q-icon :name="menuItem.icon" />
 						</q-item-section>
@@ -144,7 +144,7 @@
 			</q-list>
 		</q-drawer>
 		<q-page-container
-			style="padding-top: 0px !important;padding-left:0px !important;"
+			style="padding-top: 0px !important; padding-left: 0px !important"
 		>
 			<q-page>
 				<router-view />
@@ -155,6 +155,6 @@
 
 <script src="./index.js"></script>
 
-<style lang="stylus">
+<style scoped lang="stylus">
 @import './index.styl';
 </style>

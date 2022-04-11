@@ -13,7 +13,13 @@
                 />
             </div>
         </q-breadcrumbs> -->
-
+		<q-page-sticky
+			position="bottom-right"
+			:offset="[18, 18]"
+			v-if="$q.platform.is.mobile"
+		>
+			<q-btn fab icon="add" color="accent" @click="mostrarNuevo()" />
+		</q-page-sticky>
 		<q-breadcrumbs active-color="accent" v-if="$q.platform.is.desktop">
 			<template v-slot:separator>
 				<q-icon size="1.2em" name="arrow_forward" color="accent" />
@@ -28,9 +34,7 @@
 			<div class="flex items-center justify-end q-gutter-sm">
 				<q-chip clickable @click="mostrarNuevo()" class="btn_add">
 					<q-avatar class="activo icon_add" text-color="white">
-						<span class="material-icons">
-							add
-						</span>
+						<span class="material-icons"> add </span>
 					</q-avatar>
 					Crear Nuevo
 				</q-chip>
@@ -39,7 +43,7 @@
 		<div v-if="$q.platform.is.mobile">
 			<tabla :parametros="parametros_tabla" :funciones="funciones" />
 		</div>
-		<div style="padding-top: 2%;" v-else>
+		<div style="padding-top: 2%" v-else>
 			<tabla :parametros="parametros_tabla" :funciones="funciones" />
 		</div>
 		<q-dialog
@@ -53,7 +57,7 @@
 				<q-bar>
 					<div
 						class="text-h3 titulo_crear"
-						style="padding-left: 46%;"
+						style="padding-left: 46%"
 						color="text"
 					>
 						Nuevo Perfil
@@ -87,10 +91,10 @@
 				<q-card-section
 					class="q-pt-none"
 					v-if="$q.platform.is.desktop"
-					style="padding: 0px !important;"
+					style="padding: 0px !important"
 				>
 					<div class="row">
-						<div class="col-6" style="padding: 1% 7%;">
+						<div class="col-6" style="padding: 1% 7%">
 							<q-input
 								dense
 								standout
@@ -128,8 +132,8 @@
 								label="Estado"
 							/>
 						</div>
-						<div class="col-6" style="padding:1% 3% 0%;">
-							<div class="row ">
+						<div class="col-6" style="padding: 1% 3% 0%">
+							<div class="row">
 								<div class="col-5 text-subtitle1 titulo_crear">
 									Nombre
 								</div>
@@ -144,7 +148,7 @@
 								v-for="dim in rutas_guardar_nuevo"
 								:key="dim.path"
 								class="row"
-								style="max-height: 30px !important;"
+								style="max-height: 30px !important"
 							>
 								<div class="col-5 texto_check">
 									{{ dim.name }}
@@ -155,7 +159,7 @@
 								<div
 									class="col-2 texto_check"
 									align="center"
-									style="cursor: pointer;"
+									style="cursor: pointer"
 								>
 									<q-checkbox
 										v-model="dim.value"
@@ -208,13 +212,13 @@
 								class="input-reg"
 							/>
 						</div>
-						<div class="col-12" style="padding-bottom: 5%;">
+						<div class="col-12" style="padding-bottom: 5%">
 							<div class="text-h6 titulo_crear" color="text">
 								Rutas del Perfil
 							</div>
 						</div>
 						<div class="col-12">
-							<div class="row ">
+							<div class="row">
 								<div class="col-4 text-subtitle1 titulo_crear">
 									Nombre
 								</div>
@@ -232,12 +236,12 @@
 								:key="dim.path"
 								class="row"
 							>
-								<div class="col-4 ">{{ dim.name }}</div>
-								<div class="col-4 ">{{ dim.path }}</div>
+								<div class="col-4">{{ dim.name }}</div>
+								<div class="col-4">{{ dim.path }}</div>
 								<div
 									class="col-4 texto_check"
 									align="center"
-									style="cursor: pointer;"
+									style="cursor: pointer"
 								>
 									<q-checkbox
 										v-model="dim.value"
@@ -275,7 +279,7 @@
 				<q-bar>
 					<div
 						class="text-h4 titulo_crear"
-						style="padding-left: 46%;"
+						style="padding-left: 46%"
 						color="text"
 					>
 						Editar Perfil
@@ -309,10 +313,10 @@
 				<q-card-section
 					class="q-pt-none"
 					v-if="$q.platform.is.desktop"
-					style="padding: 0px !important;"
+					style="padding: 0px !important"
 				>
 					<div class="row">
-						<div class="col-6" style="padding: 1% 7%;">
+						<div class="col-6" style="padding: 1% 7%">
 							<q-input
 								dense
 								standout
@@ -351,8 +355,8 @@
 								label="Estado"
 							/>
 						</div>
-						<div class="col-6" style="padding:1% 3% 0%;">
-							<div class="row ">
+						<div class="col-6" style="padding: 1% 3% 0%">
+							<div class="row">
 								<div class="col-5 text-subtitle1 titulo_crear">
 									Nombre
 								</div>
@@ -366,8 +370,8 @@
 							<div
 								v-for="dim in rutas_guardar"
 								:key="dim.path"
-								class="row "
-								style="max-height: 30px !important;"
+								class="row"
+								style="max-height: 30px !important"
 							>
 								<div class="col-5 texto_check">
 									{{ dim.name }}
@@ -378,7 +382,7 @@
 								<div
 									class="col-2 texto_check"
 									align="center"
-									style="cursor: pointer;"
+									style="cursor: pointer"
 								>
 									<q-checkbox
 										v-model="dim.value"
@@ -432,13 +436,13 @@
 								class="input-reg"
 							/>
 						</div>
-						<div class="col-12" style="padding-bottom: 5%;">
+						<div class="col-12" style="padding-bottom: 5%">
 							<div class="text-h6 titulo_crear" color="text">
 								Rutas del Perfil
 							</div>
 						</div>
 						<div class="col-12">
-							<div class="row ">
+							<div class="row">
 								<div class="col-4 text-subtitle1 titulo_crear">
 									Nombre
 								</div>
@@ -456,12 +460,12 @@
 								:key="dim.path"
 								class="row"
 							>
-								<div class="col-4 ">{{ dim.name }}</div>
-								<div class="col-4 ">{{ dim.path }}</div>
+								<div class="col-4">{{ dim.name }}</div>
+								<div class="col-4">{{ dim.path }}</div>
 								<div
 									class="col-4 texto_check"
 									align="center"
-									style="cursor: pointer;"
+									style="cursor: pointer"
 								>
 									<q-checkbox
 										v-model="dim.value"
@@ -490,7 +494,7 @@
 		</q-dialog>
 
 		<q-dialog persistent width="800" v-model="modal_eliminar">
-			<q-card class="modales" style="width: 800px;">
+			<q-card class="modales" style="width: 800px">
 				<q-card-section align="center">
 					<div class="text-h6 titulo_crear" color="text">
 						Eliminar registro
@@ -519,7 +523,7 @@
 				</q-card-section>
 				<div
 					class="q-mt-md q-pb-md q-pr-lg q-pl-lg"
-					style="text-align: right;"
+					style="text-align: right"
 				>
 					<q-btn
 						rounded
@@ -536,18 +540,11 @@
 				</div>
 			</q-card>
 		</q-dialog>
-		<q-page-sticky
-			position="bottom-right"
-			:offset="[18, 18]"
-			v-if="$q.platform.is.mobile"
-		>
-			<q-btn fab icon="add" color="accent" @click="mostrarNuevo()" />
-		</q-page-sticky>
 	</div>
 </template>
 
 <script src="./index.js"></script>
 
-<style lang="stylus">
+<style scoped lang="stylus">
 @import './index.styl'
 </style>
