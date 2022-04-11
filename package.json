@@ -57,9 +57,6 @@
 		"@quasar/extras": "^1.9.4",
 		"strip-ansi": "=3.0.1"
 	},
-	"engines": {
-		"node": ">= 12.9.0"
-	},
 	"resolutions": {
 		"ajv": "6.8.1"
 	}
