@@ -60,9 +60,6 @@
 	"engines": {
 		"node": ">= 12.9.0"
 	},
-	"browserslist": [
-		"last 1 version, not dead, ie >= 11"
-	],
 	"resolutions": {
 		"ajv": "6.8.1"
 	}
