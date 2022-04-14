@@ -8249,7 +8249,7 @@ qs@~6.5.2:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.3.tgz#3aeeffc91967ef6e35c0e488ef46fb296ab76aad"
   integrity sha512-qxXIEh4pCGfHICj1mAJQ2/2XVZkjCDTcEgfoSQxc/fYivUZxTkk7L3bDBJSoNrEzXI17oUO5Dp07ktqE5KzczA==
 
-quasar@^1.18.9:
+quasar@^1.18.10:
   version "1.18.10"
   resolved "https://registry.yarnpkg.com/quasar/-/quasar-1.18.10.tgz#193de1aab8e67182465339e9a3fd894d80a89747"
   integrity sha512-PyqjGEHzW0eKdnAmLli0Q36uS+WgGFCFvR/wQ9HgVy+pICL1wHgkL2bQyT5CQ7HwTfimVlE5dr+JBFYOA+wFpQ==
