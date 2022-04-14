@@ -30,22 +30,22 @@ const httpLink = createUploadLink({ uri: process.env.API_URL, fetch: fetch })
 //     }
 // )
 // const wsLink = new WebSocketLink(wsClient)
-// const wsLink = new WebSocketLink({
-// 	uri: process.env.API_WS_URL,
-// 	options: {
-// 		reconnect: true,
-// 		// connectionParams: () => {
-// 		// 	const token = localStorage.getItem('token')
-// 		// 	// return the headers to the context so httpLink can read them
-// 		// 	return {
-// 		// 		headers: {
-// 		// 			...headers,
-// 		// 			authorization: token ? `Bearer ${token}` : ''
-// 		// 		}
-//         //     }
-//         // },
-// 	},
-// })
+const wsLink = new WebSocketLink({
+	uri: process.env.API_WS_URL,
+	options: {
+		reconnect: true,
+		// connectionParams: () => {
+		// 	const token = localStorage.getItem('token')
+		// 	// return the headers to the context so httpLink can read them
+		// 	return {
+		// 		headers: {
+		// 			...headers,
+		// 			authorization: token ? `Bearer ${token}` : ''
+		// 		}
+        //     }
+        // },
+	},
+})
 const authLink = ST((_, { headers }) => {
 	// get the authentication token from local storage if it exists
 	const token = localStorage.getItem('token')
@@ -67,6 +67,7 @@ const terminatingLink = split(
 			definition.operation === "subscription"
 		);
 	},
+	wsLink,
 	httpLink
 );
 // const omitTypename = (key, value) => {
