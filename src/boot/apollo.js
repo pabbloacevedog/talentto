@@ -67,7 +67,6 @@ const terminatingLink = split(
 			definition.operation === "subscription"
 		);
 	},
-	wsLink,
 	httpLink
 );
 // const omitTypename = (key, value) => {
