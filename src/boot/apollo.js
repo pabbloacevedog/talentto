@@ -126,7 +126,9 @@ const apollo = new VueApollo({
 		}
 	},
 });
-
+console.log(
+	`[process.env.VUE_APP_GRAPHQL_HTTP]: ${process.env.VUE_APP_GRAPHQL_HTTP}`
+);
 // window.__APOLLO_CLIENT__ = apollo
 export default ({ app, Vue, store }) => {
 	Vue.use(apollo);
