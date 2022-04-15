@@ -13,7 +13,7 @@ import { getMainDefinition } from "apollo-utilities";
 
 // const httpLink = createHttpLink({ uri: process.env.API_URL, fetch: fetch })
 const httpLink = createUploadLink({
-	uri: `https://api-tts.herokuapp.com/graphql`,
+	uri: process.env.VUE_APP_GRAPHQL_HTTP,
 	fetch: fetch,
 });
 // let wsClient = new SubscriptionClient(
