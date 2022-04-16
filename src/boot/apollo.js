@@ -9,7 +9,7 @@ import { createUploadLink } from "apollo-upload-client";
 import { getMainDefinition } from "apollo-utilities";
 
 // const httpLink = createHttpLink({ uri: process.env.API_URL, fetch: fetch })
-const httpLink = createUploadLink({
+const httpLink = createHttpLink({
 	uri: process.env.GRAPHQL_URL,
 	fetch: fetch,
 });
