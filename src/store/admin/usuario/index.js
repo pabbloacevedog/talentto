@@ -39,6 +39,7 @@ const actions = {
 	},
 	async contarUsuarios({ commit }) {
 		commit("CONTAR");
+		console.log("contarUsuarios", this);
 		await this.$apollo.defaultClient.resetStore();
 		await this.$apollo.defaultClient
 			.query({
