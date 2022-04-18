@@ -1,5 +1,4 @@
 import MenuPublico from '@/layouts/menu_publico/index.vue'
-import Inicio from '@/pages/web/inicio/inicio.vue'
 
 export default [
 
