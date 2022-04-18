@@ -7,7 +7,7 @@
 			class="col-7 col-md-7 col-xs-12"
 			style="display: table; padding: 2%"
 		>
-			<div class="column flex-center titulo-areas text-white">
+			<div class="column flex-center titulo-nosotros text-white">
 				NUESTRO EQUIPO
 			</div>
 			<q-carousel
@@ -38,21 +38,38 @@
 							horizontal
 							avatar
 							class="row"
-							style="padding-top: 5vh; padding-bottom: 0;padding-left: 5vw;"
+							style="
+								padding-top: 5vh;
+								padding-bottom: 0;
+								padding-left: 5vw;
+							"
 						>
-							<a class="avatar has-story" >
-								<img :src="item.src" :ratio="1" class="img-nosotros"/>
-							</a>
 							<q-card-section
 								style="padding: 0 !important; margin: auto"
 								align="center"
+								class="row"
 							>
-								<div class="nombre_nosotros">
-									{{ item.nombre }}
-								</div>
-								<div class="cargo_nosotros">
-									{{ item.cargo }}
-								</div>
+								<a
+									class="avatar has-story col-7 col-md-7 col-xs-12"
+								>
+									<img
+										:src="item.src"
+										:ratio="1"
+										class="img-nosotros"
+									/>
+								</a>
+								<q-card-section
+									style="padding: 0 !important; margin: auto"
+									align="center"
+									class="col-7 col-md-7 col-xs-12"
+								>
+									<div class="nombre_nosotros">
+										{{ item.nombre }}
+									</div>
+									<div class="cargo_nosotros">
+										{{ item.cargo }}
+									</div>
+								</q-card-section>
 							</q-card-section>
 						</q-card-section>
 

@@ -5,8 +5,8 @@
 			style="height: 15vh; padding-top: 2%"
 		>
 			<div class="column flex-center">
-				<div class="text-white column flex-center titulo-historia">
-					Nuestros Clentes
+				<div class="text-white column flex-center titulo-clientes">
+					NUESTROS CLIENTES
 				</div>
 			</div>
 		</div>

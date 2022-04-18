@@ -27,7 +27,7 @@
 							<q-img
 								:src="bandera_chile"
 								spinner-color="white"
-								style="width: 150px"
+								style="width: 130px"
 								img-class="my-custom-image"
 								class="rounded-borders"
 							>

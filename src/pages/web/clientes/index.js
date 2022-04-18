@@ -60,7 +60,7 @@ export default Vue.component("Clientes", {
 					nombre: "TAKA"
 				},
 				{
-					src: "statics/clientes/terral",
+					src: "statics/clientes/terral.png",
 					nombre: "TERRAL"
 				}
 			]
