@@ -2,7 +2,7 @@
 	<div id="app">
 		<div class="contenedor_cont_todo">
 			<div class="row" style="height: 100% !important">
-				<div class="col-4 col-md-4 col-xs-12 bloq_cont_iz">
+				<div class="col-4 col-md-4 col-xs-12 bloq_cont_iz"  data-aos="zoom-out-right">
 					<div class="q-pa-lg">
 						<q-toolbar>
 							<div class="titulo_contacto">Contacto</div>
@@ -20,7 +20,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-8 col-md-8 col-xs-12 bloq_cont_der">
+				<div class="col-8 col-md-8 col-xs-12 bloq_cont_der"  data-aos="zoom-out-left">
 					<div class="row q-pa-md">
 						<div class="col-3 col-md-3 col-xs-12"></div>
 						<div class="col-5 col-md-5 col-xs-4">

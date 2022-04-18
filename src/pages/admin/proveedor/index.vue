@@ -340,7 +340,3 @@
 </template>
 
 <script src="./index.js"></script>
-
-<style scoped lang="stylus">
-@import './index.styl'
-</style>

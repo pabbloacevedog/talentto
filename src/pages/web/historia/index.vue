@@ -17,7 +17,7 @@
 			class="col-6 col-md-6 col-xs-12"
 			v-if="$q.platform.is.desktop"
 		></div>
-		<div class="col-6 col-md-6 col-xs-12">
+		<div class="col-6 col-md-6 col-xs-12" data-aos="fade-left">
 			<transition appear enter-active-class="animated fadeInUpBig">
 				<div
 					v-if="$q.platform.is.mobile"

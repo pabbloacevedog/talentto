@@ -47,22 +47,26 @@
 							/>
 						</div>
 					</transition>
-					<transition appear enter-active-class="animated fadeInUp">
-						<div class="q-mt-md column flex-center text-miembros">
-							<q-chip
-								size="md"
-								label="Conózcanos"
-								class="ver_mas"
-								text-color="white"
-								clickable
-								@click="scrollToElement('#historia')"
-							/>
-						</div>
-					</transition>
 				</div>
 			</div>
 		</div>
-		<div class="col-5" style="display: table; padding: 2%"></div>
+		<div class="col-5" style="display: table; padding: 2%">
+			<transition appear enter-active-class="animated fadeInUp">
+				<div
+					class="column flex-center"
+					style="position: absolute; left: 45vw; top: 84vh"
+				>
+					<q-chip
+						size="md"
+						label="Conózcanos ↓"
+						class="ver_mas"
+						text-color="white"
+						clickable
+						@click="scrollToElement('#historia')"
+					/>
+				</div>
+			</transition>
+		</div>
 	</div>
 	<div
 		v-else

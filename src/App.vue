@@ -10,6 +10,8 @@
 
 <script>
 import { mapGetters } from "vuex";
+import AOS from "aos";
+import "aos/dist/aos.css";
 window.$ = window.jQuery = require("jquery");
 export default {
 	name: "App",
@@ -35,6 +37,9 @@ export default {
 			if (res !== -1) return true;
 			else return false;
 		}
+	},
+	mounted() {
+		AOS.init();
 	}
 };
 </script>

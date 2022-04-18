@@ -63,8 +63,7 @@
 			side="left"
 			:width="200"
 			:breakpoint="500"
-			color="text"
-			class="drawer_list_public"
+			class="drawer_list"
 			show-if-above
 			:mini="miniState"
 			@mouseover="miniState = false"

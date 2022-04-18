@@ -19,8 +19,7 @@
 .q-field__label
 	color: $text !important;
 .q-drawer__content
-	background: #000000bf !important;
-	background: rgba(10,10,10,0.78);
+	background: $primary !important;
 	-webkit-backdrop-filter: blur(8.5px);
 	backdrop-filter: blur(8.5px);
 
@@ -36,9 +35,9 @@
 	font-size: 15px;
 
 .menu_list
-	padding-top: 50px;
 	color: $text;
 	font-family: comfortaa_l;
+	background: $primary !important;
 
 .menu_item
 	padding: 5px;
@@ -59,4 +58,8 @@
 }
 .q-drawer {
 	background: #fff0;
+}
+.q-item.q-router-link--active {
+	color: $accent;
+	background: #20222a !important;
 }

@@ -1,6 +1,6 @@
 <template>
 	<div class="div_fondo_areas row">
-		<div class="col-6 col-md-6 col-xs-12 div_cont">
+		<div class="col-6 col-md-6 col-xs-12 div_cont"  data-aos="zoom-in">
 			<transition
 				appear
 				enter-active-class="animated slideInLeft"
@@ -159,7 +159,7 @@
 				enter-active-class="animated slideInRight"
 				leave-active-class="animated slideInLeft"
 			>
-				<img :src="src_persona" style="height: 111vh" />
+				<img :src="src_persona" style="height: 111vh" data-aos="fade-left" />
 			</transition>
 		</div>
 	</div>

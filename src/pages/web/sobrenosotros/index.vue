@@ -2,7 +2,7 @@
 	<div class="div_fondo_snosotros row" style="background-color: #000000">
 		<div
 			class="col-12"
-			style="height: 20px; padding-top: 2%"
+			style="    padding-bottom: 2%;"
 			v-if="$q.platform.is.desktop"
 		>
 			<div class="text-white column flex-center titulo-snosotros">
@@ -16,10 +16,10 @@
 			>
 				Sobre nosotros
 			</div>
-			<img :src="src_persona" class="img-snosotros" />
+			<img :src="src_persona" class="img-snosotros"  data-aos="fade-right" data-aos-offset="100"/>
 		</div>
 		<div class="col-6 col-md-6 col-xs-12">
-			<div class="column flex-center">
+			<div class="column flex-center" data-aos="fade-left" data-aos-offset="100">
 				<p class="text-white column flex-center p-snosotros">
 					Nuestro equipo está constituido por profesionales
 					multidiciplinarios con más de 20 años de trayectoria en
