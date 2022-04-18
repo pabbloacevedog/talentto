@@ -15,10 +15,9 @@
 					v-if="$q.platform.is.mobile"
 				/>
 				<q-btn
-					style="margin-left: 12px"
 					flat
 					round
-					class="q-mr-sm"
+					class="q-mr-sm logo_menu"
 					@click="irPublic"
 				>
 					<img

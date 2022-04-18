@@ -22,7 +22,7 @@ export default Vue.component("MenuPublico", {
 					path: "/",
 					icon: "fas fa-globe-africa",
 					pag: false,
-					tag: "/#areas"
+					tag: "/#areas",
 				},
 				// {name: 'Clientes', path:'/clientes', icon: '', tag: '#clientes'},
 				{
@@ -30,50 +30,50 @@ export default Vue.component("MenuPublico", {
 					path: "/asesorias",
 					icon: "fas fa-chart-line",
 					pag: true,
-					tag: "/asesorias"
+					tag: "/asesorias",
 				},
 				{
 					name: "Capacitaciones",
 					path: "/capacitaciones",
 					icon: "fas fa-chalkboard-teacher",
 					pag: true,
-					tag: "/capacitaciones"
+					tag: "/capacitaciones",
 				},
 				{
 					name: "Empleos",
 					path: "/empleos",
 					pag: true,
 					icon: "fas fa-briefcase",
-					tag: "/empleos"
+					tag: "/empleos",
 				},
 				{
 					name: "Proveedores",
 					path: "/Proveedores",
 					pag: true,
-					icon: "",
-					tag: "/Proveedores"
+					icon: "fas fa-clipboard",
+					tag: "/Proveedores",
 				},
 				{
 					name: "Clientes",
 					path: "/",
 					pag: false,
 					icon: "fas fa-ad",
-					tag: "/#clientes"
+					tag: "/#clientes",
 				},
 				{
 					name: "Nosotros",
 					path: "/",
 					pag: false,
 					icon: "fas fa-house-user",
-					tag: "/#nosotros"
+					tag: "/#nosotros",
 				},
 				{
 					name: "Contacto",
 					path: "/Contacto",
 					icon: "fas fa-phone",
 					pag: false,
-					tag: "/#contacto"
-				}
+					tag: "/#contacto",
+				},
 			],
 			link: "",
 			ir_home: "",
@@ -81,7 +81,7 @@ export default Vue.component("MenuPublico", {
 			scrollPosition: null,
 			miniState: true,
 			mostrarDrawer: false,
-			nombre: ""
+			nombre: "",
 		};
 	},
 	computed: {

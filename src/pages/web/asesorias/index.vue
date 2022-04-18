@@ -38,7 +38,7 @@
 				card-class="bg-primary text-white"
 				title="Asesorias"
 				style="color: #ffffff"
-				class="tabla_capacitaciones"
+				class="tabla_asesorias"
 				:data="parametros_tabla.data"
 				:columns="parametros_tabla.columns"
 				row-key="name"
