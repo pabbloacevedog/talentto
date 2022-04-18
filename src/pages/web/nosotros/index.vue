@@ -28,7 +28,7 @@
 					:key="index"
 					:img-src="item.src"
 					:ratio="1"
-					style="background-image: none; padding-top: 10vh"
+					style="background-image: none; padding-top: 8vh"
 				>
 					<q-card
 						class="card-nosotros text-white"
@@ -38,14 +38,10 @@
 							horizontal
 							avatar
 							class="row"
-							style="
-								padding-top: 5vh;
-								padding-bottom: 0;
-								padding-left: 5vw;
-							"
+							style="padding-top: 5vh; padding-bottom: 0;padding-left: 5vw;"
 						>
-							<a class="avatar has-story">
-								<q-img :src="item.src" :ratio="1" />
+							<a class="avatar has-story" >
+								<img :src="item.src" :ratio="1" class="img-nosotros"/>
 							</a>
 							<q-card-section
 								style="padding: 0 !important; margin: auto"
