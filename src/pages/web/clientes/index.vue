@@ -22,6 +22,7 @@
 						:ratio="16 / 9"
 						spinner-color="white"
 						style="width: 380px"
+						contain
 						class="rounded-borders"
 					>
 						<div class="absolute-bottom text-center text-body2">

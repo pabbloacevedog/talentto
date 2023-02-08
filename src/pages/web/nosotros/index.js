@@ -9,7 +9,7 @@ export default Vue.component('Nosotros', {
         return {
 			src_fondo: "statics/img/fondo_nosotros_final.png",
 			// src_persona:'statics/img/nosotros.png',
-			slide: 1,
+			slide: 0,
 			items: [
 				{
 					src: "statics/nosotros/patricia_borgues.png",

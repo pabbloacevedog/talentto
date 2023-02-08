@@ -111,9 +111,6 @@
 </template>
 
 <script src="./start.js">
-export default {
-	name: 'Auth',
-}
 </script>
 
 <style scoped lang="stylus">

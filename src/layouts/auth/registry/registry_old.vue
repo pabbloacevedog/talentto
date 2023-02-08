@@ -1,9 +1,18 @@
 <template>
 	<div v-if="!isLogin" id="app">
 		<div class="contenedor_todo">
-			<div class="row q-pa-xl contenedor-login">
-
-				<div class="col-6 col-md-6 col-xs-12 bloq_iz">
+			<div class="row q-pa-lg contenedor-login">
+				<div class="col-6 bloq_up_reg col-md-6 col-xs-12" v-if="$q.platform.is.mobile">
+					<transition appear enter-active-class="animated slideInRight"
+						leave-active-class="animated slideInLeft">
+						<div class="contenedor_reg_iz">
+							<div class="center">
+								<img :src="avatar_default" class="center-img-reg" />
+							</div>
+						</div>
+					</transition>
+				</div>
+				<div class="col-6 bloq_iz_reg col-md-6 col-xs-12">
 					<center>
 						<q-card class="sin_fondo">
 							<q-card-section class="q-py-xs row" style="display: flex; align-items: center">
@@ -146,15 +155,12 @@
 						</q-card>
 					</center>
 				</div>
-				<div class="col-6 bloq_der col-md-6 col-xs-12">
-					<transition
-						appear
-						enter-active-class="animated slideInRight"
-						leave-active-class="animated slideInLeft"
-					>
-						<div class="contenedor_login_iz">
+				<div class="col-6 col-md-6 col-xs-12 bloq_der_reg" v-if="$q.platform.is.desktop">
+					<transition appear enter-active-class="animated slideInLeft"
+						leave-active-class="animated slideInRight">
+						<div class="contenedor_reg_iz">
 							<div class="center">
-								<img :src="avatar_default" class="center-img" />
+								<img :src="avatar_default" class="center-img-reg" />
 							</div>
 						</div>
 					</transition>
@@ -168,5 +174,5 @@
 </script>
 
 <style scoped lang="stylus">
-@import './registry.styl'
+@import './registry.styl';
 </style>

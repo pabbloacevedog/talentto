@@ -102,7 +102,7 @@
 										text-color="white"
 										style="padding: 16px"
 									>
-										Ver más
+										Solicitar más información
 									</q-chip>
 								</q-card-actions>
 							</q-card>

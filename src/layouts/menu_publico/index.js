@@ -46,13 +46,13 @@ export default Vue.component("MenuPublico", {
 					icon: "fas fa-briefcase",
 					tag: "/empleos",
 				},
-				{
-					name: "Proveedores",
-					path: "/Proveedores",
-					pag: true,
-					icon: "fas fa-clipboard",
-					tag: "/Proveedores",
-				},
+				// {
+				// 	name: "Proveedores",
+				// 	path: "/Proveedores",
+				// 	pag: true,
+				// 	icon: "fas fa-clipboard",
+				// 	tag: "/Proveedores",
+				// },
 				{
 					name: "Clientes",
 					path: "/",

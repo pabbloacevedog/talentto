@@ -11,7 +11,7 @@ export default Vue.component("Contacto", {
 			src_fondo: "statics/img/fondo_historia.png",
 			bandera_mexico: "statics/b_mexico.jpg",
 			bandera_chile: "statics/b_chile.png",
-			img_contacto: "statics/contact.png",
+			img_contacto: "statics/contact.jpg",
 			icono_instagram: "statics/instagram.png",
 			icono_facebook: "statics/facebook.png",
 			icono_gmail: "statics/gmail.png",
@@ -42,13 +42,13 @@ export default Vue.component("Contacto", {
 					headerClasses: "bg-primary text-white"
 				},
 				{
-					name: "value2",
-					label: "MÉXICO (Rivera Maya)",
-					field: "value2",
+					name: "value1",
 					align: "left",
+					label: "MÉXICO (Rivera Maya)",
+					field: "value1",
 					sortable: false,
 					headerClasses: "bg-primary text-white"
-				}
+				},
 			],
 			data: [
 				{

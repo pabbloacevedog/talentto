@@ -38,9 +38,9 @@
 							<q-chip
 								style="font-size: 20px !important"
 								:label="
-									'🎉 ¡Ya somos ' +
+									' ¡Ya somos ' +
 									total.total +
-									' usuarios! 🥳'
+									' usuarios! '
 								"
 								text-color="white"
 								color="red"
@@ -105,7 +105,7 @@
 				<div class="q-mt-md column flex-center text-miembros">
 					<q-chip
 						style="font-size: 20px !important"
-						:label="'🎉 ¡Ya somos ' + total.total + ' usuarios! 🥳'"
+						:label="'¡Ya somos ' + total.total + ' usuarios!'"
 						text-color="white"
 						color="red"
 					/>
