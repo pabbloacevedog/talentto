@@ -1,4 +1,4 @@
-import Inicio from '@/pages/web/inicio/inicio.vue'
+import Inicio from '@/pages/web/Inicio/inicio.vue'
 
 export default [
 
