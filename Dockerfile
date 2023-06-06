@@ -2,7 +2,7 @@
 FROM node:14.20.0 as develop-stage
 WORKDIR /app
 COPY package*.json ./
-RUN npm i -g @quasar/cli
+RUN npm i @quasar/cli@2.0.0
 COPY . .
 # build stage
 FROM develop-stage as build-stage
