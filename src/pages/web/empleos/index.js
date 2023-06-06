@@ -1,6 +1,6 @@
 import Vue from "vue";
 import { mapGetters } from "vuex";
-import ColorThief from "color-thief";
+// import ColorThief from "color-thief";
 export default Vue.component("Empleos", {
 	$validates: 1,
 	components: {
@@ -214,23 +214,23 @@ export default Vue.component("Empleos", {
 		ir_web(web) {
 			window.location = "http://" + web;
 		},
-		color_borde(codigo) {
-			if (codigo) {
-				const colorThief = new ColorThief();
-				const img = document.getElementById(codigo);
-				debugger;
-				// Make sure image is finished loading
-				if (img.complete) {
-					console.log(colorThief.getColor(img));
-					return colorThief.getColor(img);
-				} else {
-					image.addEventListener("load", function() {
-						console.log(colorThief.getColor(img));
-						return colorThief.getColor(img);
-					});
-				}
-			}
-		},
+		// color_borde(codigo) {
+		// 	if (codigo) {
+		// 		const colorThief = new ColorThief();
+		// 		const img = document.getElementById(codigo);
+		// 		debugger;
+		// 		// Make sure image is finished loading
+		// 		if (img.complete) {
+		// 			console.log(colorThief.getColor(img));
+		// 			return colorThief.getColor(img);
+		// 		} else {
+		// 			image.addEventListener("load", function() {
+		// 				console.log(colorThief.getColor(img));
+		// 				return colorThief.getColor(img);
+		// 			});
+		// 		}
+		// 	}
+		// },
 		cargar_filtros(data) {
 			this.cargos = [...new Set(data.map(d => d.cargo))];
 			this.links = [...new Set(data.map(d => d.link))];
