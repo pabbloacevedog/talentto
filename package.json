@@ -32,6 +32,7 @@
 		"dotenv": "^8.2.0",
 		"graphql": "^15.0.0",
 		"graphql-tag": "^2.12.6",
+		"jquery": "^3.6.4",
 		"jwt-decode": "^2.2.0",
 		"node-fetch": "^2.6.7",
 		"quasar": "^1.18.10",
@@ -44,7 +45,7 @@
 		"vuex-persist": "^2.2.0"
 	},
 	"engines": {
-		"node": "= 12.22.10"
+		"node": "= 14.20.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.9.0",
